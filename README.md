@@ -59,8 +59,8 @@ It provides a robust backend API for managing patients and a modern frontend das
 
 ### 1️⃣ Clone Repository
 ```bash
-git clone https://github.com/Rohancherukuri/patient-management-system.git
-cd patient_management_system
+git clone https://github.com/Rohancherukuri/patient_management_system_project.git
+cd patient_management_system_project/patient_managment_system
 ```
 
 ### 2️⃣ Setup Python Environment
@@ -122,16 +122,6 @@ python main.py
 ```
 
 ---
-
-## 📷 Screenshots (Frontend Preview)
-
-- **Dashboard** → Patient stats + charts  
-- **Patient List** → Table view  
-- **Patient Form** → Add / Edit form  
-- **Detail Page** → Patient info + delete/edit buttons  
-
----
-
 ## 🛠️ Tech Stack
 
 - **Backend:** FastAPI, Pydantic  
