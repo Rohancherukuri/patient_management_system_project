@@ -27,30 +27,43 @@ It provides a robust backend API for managing patients and a modern frontend das
 
 ```
 .
-├── backend/
-│   ├── api.py                # FastAPI routes + APIClient
-│   ├── database.py           # SurrealDB wrapper
-│   ├── orm.py                # Pydantic models
-│   ├── patients.json         # Initial patient data
-│   └── main.py               # FastAPI entrypoint
-│
-├── frontend/
-│   ├── app.py                # Flet entrypoint
-│   ├── utils/
-│   │   ├── constants.py      # Page configuration
-│   │   └── api_client.py     # Backend API calls
-│   ├── components/
-│   │   └── navigation.py     # Navigation manager
-│   ├── pages/
-│   │   ├── home_page.py      # Dashboard
-│   │   ├── about_page.py     # About app
-│   │   ├── patients_page.py  # Patients list
-│   │   ├── patient_form_page.py # Create/Edit
-│   │   └── patient_detail_page.py # Detail view
-│
-├── surrealdb.log             # Database logs
-├── README.md                 # 📖 You are here
-└── requirements.txt          # Dependencies
+├── main.py
+├── requirements.txt
+├── README.md
+├── data/
+│   └── patients.json
+├── logs/
+│   ├── apiclient.log
+│   ├── app.log
+│   ├── backend_api_client.log
+│   ├── database.log
+│   ├── main.log
+│   └── server.log
+├── src/
+│   ├── __init__.py
+│   ├── backend/
+│   │   ├── __init__.py
+│   │   ├── api.py
+│   │   ├── database.py
+│   │   ├── orm.py
+│   │   ├── server.py
+│   │   └── test.py
+│   └── frontend/
+│       ├── client.py
+│       ├── components/
+│       │   └── navigation.py
+│       ├── frontend_utils/
+│       │   ├── backend_api_client.py
+│       │   └── constants.py
+│       └── pages/
+│           ├── about_page.py
+│           ├── home_page.py
+│           ├── patient_detail_page.py
+│           ├── patient_form_page.py
+│           └── patients_page.py
+└── utils/
+    ├── __init__.py
+    └── customlogger.py
 ```
 
 ---
@@ -60,7 +73,7 @@ It provides a robust backend API for managing patients and a modern frontend das
 ### 1️⃣ Clone Repository
 ```bash
 git clone https://github.com/Rohancherukuri/patient_management_system_project.git
-cd patient_management_system_project/patient_managment_system
+cd patient_management_system
 ```
 
 ### 2️⃣ Setup Python Environment
@@ -77,11 +90,6 @@ pip install -r requirements.txt
 ### 4️⃣ Start SurrealDB
 Download SurrealDB from [surrealdb.com](https://surrealdb.com) and run:
 
-```bash
-surreal start --log debug memory
-```
-(or use `surreal start file:mydb.db` to persist data)
-
 ### 5️⃣ Run APP
 ```bash
 python main.py
@@ -96,11 +104,11 @@ python main.py
 | GET    | `/`              | Welcome message                      |
 | GET    | `/about`         | About API info                       |
 | GET    | `/view`          | Get all patients                     |
-| GET    | `/patient/{id}`  | Get single patient by ID              |
+| GET    | `/patient/{id}`  | Get single patient by ID             |
 | GET    | `/sort?sort_by=bmi` | Sort patients (by age, bmi, etc.) |
-| POST   | `/create`        | Create a new patient                  |
-| PUT    | `/edit/{id}`     | Update existing patient               |
-| DELETE | `/delete/{id}`   | Delete a patient                      |
+| POST   | `/create`        | Create a new patient                 |
+| PUT    | `/edit/{id}`     | Update existing patient              |
+| DELETE | `/delete/{id}`   | Delete a patient                     |
 
 ---
 
@@ -122,9 +130,10 @@ python main.py
 ```
 
 ---
+
 ## 🛠️ Tech Stack
 
 - **Backend:** FastAPI, Pydantic  
 - **Database:** SurrealDB (async)  
 - **Frontend:** Flet (Python UI toolkit)  
-- **Language:** Python 3.11+  
+- **Language:**
