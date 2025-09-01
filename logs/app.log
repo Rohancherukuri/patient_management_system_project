@@ -1,0 +1,2 @@
+2025-09-01 11:03:18,872 - AppLogger - INFO - Starting the Patient Management System frontend application!
+2025-09-01 11:03:18,873 - AppLogger - INFO - Frontend will connect to backend at: http://127.0.0.1:8000

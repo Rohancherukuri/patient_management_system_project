@@ -1,0 +1,10 @@
+2025-09-01 11:03:16,935 - APIClientLogger - INFO - APIClient initialized. Using data file at I:\Rohan\patient_management_system\data\patients.json
+2025-09-01 11:03:20,334 - APIClientLogger - INFO - Patient data loaded successfully.
+2025-09-01 11:03:27,148 - APIClientLogger - INFO - Patient data loaded successfully.
+2025-09-01 11:03:31,944 - APIClientLogger - INFO - Patient data loaded successfully.
+2025-09-01 11:03:36,963 - APIClientLogger - INFO - Patient data loaded successfully.
+2025-09-01 11:03:37,689 - APIClientLogger - INFO - Patient data loaded successfully.
+2025-09-01 11:03:38,554 - APIClientLogger - INFO - Patient data loaded successfully.
+2025-09-01 11:03:39,361 - APIClientLogger - INFO - Patient data loaded successfully.
+2025-09-01 11:03:40,358 - APIClientLogger - INFO - Patient data loaded successfully.
+2025-09-01 11:03:58,458 - APIClientLogger - INFO - Shutting down APIClient executor...
